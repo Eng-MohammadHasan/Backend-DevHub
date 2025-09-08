@@ -15,3 +15,9 @@ string userName = symbol + name;
 Console.WriteLine("Your username is : " + userName);
 Console.WriteLine(x);
 Console.WriteLine("My age = " + age);
+
+ //-----------------------------------------------------------------
+ // Constants
+ //-----------------------------------------------------------------
+ const double PI = 3.14159;
+ Console.WriteLine(PI);
