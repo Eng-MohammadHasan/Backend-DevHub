@@ -1,0 +1,73 @@
+💻 USING SQL*PLUS WITH SCRIPT FILES
+──────────────────────────────────────────────
+
+Step 0: Open SQL*Plus
+sqlplus scott/tiger@//localhost:1521/ORCLPDB
+
+──────────────────────────────────────────────
+
+Step 1: Create a Folder for Your SQL Scripts (in CMD, not SQL*Plus)
+mkdir %USERPROFILE%\Desktop\Oracle_DB
+
+Creates folder Oracle_DB on your Desktop.
+Do this once.
+
+──────────────────────────────────────────────
+
+Step 2: Create a New SQL File and Write Commands (inside SQL*Plus)
+SPOOL C:\Users\Mohd\Desktop\Oracle_DB\Lec3_Part1.sql
+
+Starts writing everything you type to Lec3_Part1.sql.
+
+Write your SQL commands, for example:
+SELECT * FROM emp;
+INSERT INTO emp VALUES (101, 'John', 'SALES');
+
+──────────────────────────────────────────────
+
+Step 3: Stop Writing and Save
+SPOOL OFF
+
+Closes the file and saves it automatically in your folder.
+
+──────────────────────────────────────────────
+
+Step 4: Run the SQL File Anytime
+@C:\Users\Mohd\Desktop\Oracle_DB\Lec3_Part1.sql
+
+Executes all commands from the file.
+
+──────────────────────────────────────────────
+
+📝 EXTRA NOTES
+──────────────────────────────────────────────
+
+Make a folder for your SQL scripts...
+mkdir %USERPROFILE%\Desktop\Oracle_DB
+
+──────────────────────────────────────────────
+
+Create a new file
+SPOOL C:\Users\Mohd\Desktop\Oracle_DB\Lec3_Part1.sql
+
+If the file exists, it will overwrite it.
+If it doesn’t exist, it will create a new file.
+
+──────────────────────────────────────────────
+
+Stop writing to the file
+SPOOL OFF
+
+The file is now saved in your folder with all commands you typed.
+
+──────────────────────────────────────────────
+
+Run this SQL file from SQL*Plus
+@%USERPROFILE%\Desktop\Oracle_DB\test.sql
+
+──────────────────────────────────────────────
+
+Opens Notepad for the last command.
+Save manually with your desired filename in your folder.
+
+──────────────────────────────────────────────
